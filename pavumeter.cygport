@@ -2,10 +2,13 @@ inherit gnome2
 
 NAME="pavumeter"
 VERSION=0.9.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Audio"
 SUMMARY="PulseAudio Volume Meter"
 DESCRIPTION="PulseAudio Volume Meter (pavumeter) is a simple GTK volume meter
 for the PulseAudio sound server."
 HOMEPAGE="http://0pointer.de/lennart/projects/pavumeter"
 SRC_URI="${HOMEPAGE}/${NAME}-${VERSION}.tar.gz"
+
+# required by latest glibmm
+CXXFLAGS+=" -std=gnu++11"
